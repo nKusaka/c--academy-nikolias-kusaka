@@ -1,4 +1,5 @@
 #include "Dealership.h"
+#include <algorithm>
 
 Dealership::Dealership() {
 
@@ -11,28 +12,19 @@ Dealership::Dealership(string name, string address, string phone) {
 	this->phone = phone;
 }
 
-void Dealership::getVehicleByPrice(double min, double max) {
+vector<Vehicle>Dealership::getVehicleByPrice(double min, double max) {
+	vector<Vehicle> filtered;
 
-	vector<Vehicle> priceInventory;
+	copy_if(inventory.begin(), inventory.end(), back_inserter(filtered),
+		[min,max](const Vehicle& vehicle) { return vehicle.getPrice() >= min && vehicle.getPrice() <= max; });
 
-	cout << "All vehicles between $" << min << " and $" << max << "\n";
-
-	for (Vehicle vehicle : inventory) {
-		if (vehicle.getVehiclePrice() >= min && vehicle.getVehiclePrice() <= max) {
-			priceInventory.push_back(vehicle);
-		}
-	}
-	
-	if (!priceInventory.empty()) {
-		for (Vehicle vehicle : priceInventory) {
-			vehicle.showVehicle();
-		}
-	} 
-	else {
-		cout << "There were no vehicles within your price range found\n";
-	}
+	return filtered;
 }
 
 void Dealership::addVehicle(Vehicle vehicle) {
 	inventory.push_back(vehicle);
+}
+
+vector<Vehicle>Dealership::getAllVehicles() {
+	return inventory;
 }

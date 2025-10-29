@@ -76,6 +76,6 @@ int Vehicle::getOdometer() {
 	return this->odometer;
 }
 
-double Vehicle::getPrice() {
+double Vehicle::getPrice() const{
 	return this->price;
 }

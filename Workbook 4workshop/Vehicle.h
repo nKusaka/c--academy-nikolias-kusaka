@@ -22,7 +22,7 @@ public:
 	string getVehicleType();
 	string getColor();
 	int getOdometer();
-	double getPrice();
+	double getPrice() const;
 
 private:
 	int vin;
