@@ -16,12 +16,12 @@ public:
 	void setOdometer(int odometer);
 	void setPrice(double price);
 	int getVin() const;
-	int getYear();
-	string getMake();
-	string getModel();
-	string getVehicleType();
-	string getColor();
-	int getOdometer();
+	int getYear() const;
+	string getMake() const;
+	string getModel() const;
+	string getVehicleType() const;
+	string getColor() const;
+	int getOdometer() const;
 	double getPrice() const;
 
 private:

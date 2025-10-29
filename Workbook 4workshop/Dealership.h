@@ -10,7 +10,7 @@ class Dealership
 public:
 	Dealership();
 	Dealership(string name, string address, string phone);
-	vector<Vehicle> getVehicleByPrice(double min, double max);
+	vector<Vehicle> getVehiclesByPrice(double min, double max);
 	vector<Vehicle> getVehiclesByMakeModel(string make, string model);
 	vector<Vehicle> getVehiclesByYear(int min, int max);
 	vector<Vehicle> getVehiclesByColor(string color);

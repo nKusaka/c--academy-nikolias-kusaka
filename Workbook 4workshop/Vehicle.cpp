@@ -52,27 +52,27 @@ int Vehicle::getVin() const {
 	return this->vin;
 }
 
-int Vehicle::getYear() {
+int Vehicle::getYear() const {
 	return this->year;
 }
 
-string Vehicle::getMake() {
+string Vehicle::getMake() const {
 	return this->make;
 }
 
-string Vehicle::getModel() {
+string Vehicle::getModel() const {
 	return this->model;
 }
 
-string Vehicle::getVehicleType() {
+string Vehicle::getVehicleType() const {
 	return this->vehicleType;
 }
 
-string Vehicle::getColor() {
+string Vehicle::getColor() const {
 	return this->color;
 }
 
-int Vehicle::getOdometer() {
+int Vehicle::getOdometer() const {
 	return this->odometer;
 }
 

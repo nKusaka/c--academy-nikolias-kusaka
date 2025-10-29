@@ -12,11 +12,20 @@ Dealership::Dealership(string name, string address, string phone) {
 	this->phone = phone;
 }
 
-vector<Vehicle>Dealership::getVehicleByPrice(double min, double max) {
+vector<Vehicle>Dealership::getVehiclesByPrice(double min, double max) {
 	vector<Vehicle> filtered;
 
 	copy_if(inventory.begin(), inventory.end(), back_inserter(filtered),
 		[min,max](const Vehicle& vehicle) { return vehicle.getPrice() >= min && vehicle.getPrice() <= max; });
+
+	return filtered;
+}
+
+vector<Vehicle>Dealership::getVehiclesByMakeModel(string make, string model) {
+	vector<Vehicle> filtered;
+
+	copy_if(inventory.begin(), inventory.end(), back_inserter(filtered),
+		[make, model](const Vehicle& vehicle) { return vehicle.getMake() == make && vehicle.getModel() == model; });
 
 	return filtered;
 }
