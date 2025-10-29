@@ -20,5 +20,11 @@ int main()
     for (Vehicle vehicle : NikDealership.getVehicleByPrice(1,200000)) {
         cout << vehicle.getMake() << " " << vehicle.getModel() << "\n";
     }
+
+    NikDealership.removeVehicle(123);
+
+    for (Vehicle vehicle : NikDealership.getVehicleByPrice(1, 200000)) {
+        cout << vehicle.getMake() << " " << vehicle.getModel() << "\n";
+    }
 }
 

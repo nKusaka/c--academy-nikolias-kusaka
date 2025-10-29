@@ -25,6 +25,10 @@ void Dealership::addVehicle(Vehicle vehicle) {
 	inventory.push_back(vehicle);
 }
 
+void Dealership::removeVehicle(int vin) {
+	inventory.erase(remove_if(inventory.begin(), inventory.end(),
+		[vin](const Vehicle& vehicle) { return vehicle.getVin() == vin; }));
+}
 vector<Vehicle>Dealership::getAllVehicles() {
 	return inventory;
 }

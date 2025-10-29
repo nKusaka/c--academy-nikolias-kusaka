@@ -18,7 +18,7 @@ public:
 	vector<Vehicle> getVehiclesByType(string vehicleType);
 	vector<Vehicle> getAllVehicles();
 	void addVehicle(Vehicle vehicle);
-	void removeVehicle(Vehicle vehicle);
+	void removeVehicle(int vin);
 
 private:
 	string name;

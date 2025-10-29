@@ -48,7 +48,7 @@ void Vehicle::setPrice(double price) {
 	this->price = price;
 }
 
-int Vehicle::getVin() {
+int Vehicle::getVin() const {
 	return this->vin;
 }
 

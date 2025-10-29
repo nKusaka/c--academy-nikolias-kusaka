@@ -15,7 +15,7 @@ public:
 	void setColor(string color);
 	void setOdometer(int odometer);
 	void setPrice(double price);
-	int getVin();
+	int getVin() const;
 	int getYear();
 	string getMake();
 	string getModel();
