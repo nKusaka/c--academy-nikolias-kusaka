@@ -16,15 +16,51 @@ Vehicle::Vehicle(int vin, int year, string make, string model, string vehicleTyp
 	this->price = price;
 }
 
-string Vehicle::getVehicleColor() {
-	return this->color;
+void Vehicle::setVin(int vin) {
+	this->vin = vin;
 }
 
-string Vehicle::getVehicleMake() {
+void Vehicle::setYear(int year) {
+	this->year = year;
+}
+
+void Vehicle::setMake(string make) {
+	this->make = make;
+}
+
+void Vehicle::setModel(string model) {
+	this->model = model;
+}
+
+void Vehicle::setVehicleType(string vehicleType) {
+	this->vehicleType = vehicleType;
+}
+
+void Vehicle::setColor(string color) {
+	this->color = color;
+}
+
+void Vehicle::setOdometer(int odometer) {
+	this->odometer = odometer;
+}
+
+void Vehicle::setPrice(double price) {
+	this->price = price;
+}
+
+int Vehicle::getVin() {
+	return this->vin;
+}
+
+int Vehicle::getYear() {
+	return this->year;
+}
+
+string Vehicle::getMake() {
 	return this->make;
 }
 
-string Vehicle::getVehicleModel() {
+string Vehicle::getModel() {
 	return this->model;
 }
 
@@ -32,18 +68,14 @@ string Vehicle::getVehicleType() {
 	return this->vehicleType;
 }
 
-double Vehicle::getVehiclePrice() {
-	return this->price;
+string Vehicle::getColor() {
+	return this->color;
 }
 
-int Vehicle::getVehicleYear() {
-	return this->year;
-}
-
-int Vehicle::getVehicleOdometer() {
+int Vehicle::getOdometer() {
 	return this->odometer;
 }
 
-void Vehicle::showVehicle() {
-	cout << this->color << " " << this->make << " " << this->model << " $" << this->price << "\n";
+double Vehicle::getPrice() {
+	return this->price;
 }
