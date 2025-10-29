@@ -17,6 +17,6 @@ int main()
     NikDealership.addVehicle(car2);
     NikDealership.addVehicle(car3);
 
-    NikDealership.getVehicleByPrice(1, 100000);
+    NikDealership.getVehicleByPrice(1, 2);
 }
 
