@@ -30,6 +30,15 @@ vector<Vehicle>Dealership::getVehiclesByMakeModel(string make, string model) {
 	return filtered;
 }
 
+vector<Vehicle>Dealership::getVehiclesByYear(int min, int max) {
+	vector<Vehicle> filtered;
+	
+	copy_if(inventory.begin(), inventory.end(), back_inserter(filtered),
+		[min, max](const Vehicle& vehicle) {return vehicle.getYear() >= min && vehicle.getYear() <= max; });
+
+	return filtered;
+}
+
 void Dealership::addVehicle(Vehicle vehicle) {
 	inventory.push_back(vehicle);
 }
